@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 (async () => {
-  // ✅ 1. List only the pages that actually exist on cleenup.com
+  // ✅ 1. List only the pages that actually exist on WaxWox.com
   const routes = [
     '/',           // homepage
     '/fleet',      // fleet page
@@ -13,7 +13,7 @@ const path = require('path');
     '/posts'       // blog / posts page
   ];
 
-  const base = 'https://www.cleenup.com';
+  const base = 'https://www.WaxWox.com';
   const out  = path.join(__dirname, 'rendered');
 
   // ✅ 2. Create the output folder if it doesn’t exist
