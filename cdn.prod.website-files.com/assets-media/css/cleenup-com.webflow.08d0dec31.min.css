@@ -69,3 +69,17 @@ html{-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;font-family:sans-se
   font-style: normal;
   font-display: swap;
 }
+/* Custom logo size */
+.nav-logo {
+  width: 100px;   /* adjust as needed */
+  height: auto;   /* keeps proportions */
+}
+/* Force nmfb.svg logo bigger */
+.stack-icon._24[src*="nmfb.svg"] {
+  width: 200px !important;
+  height: auto !important;
+  max-width: none !important;
+}
+
+
+

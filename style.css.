@@ -1,0 +1,10 @@
+/* style.css content */
+body {
+    background-color: #f8f8f8; /* A light grey background */
+    font-family: Arial, sans-serif;
+}
+
+/* This targets the main heading */
+.h1 {
+    color: #4CAF50; /* A green color for the main heading */
+}
