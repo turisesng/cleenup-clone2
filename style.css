@@ -1,0 +1,143 @@
+/*
+==================================================
+1. GLOBAL RESET AND TYPOGRAPHY
+==================================================
+This sets a clean, readable base for the entire site.
+*/
+
+:root {
+    /* Define variables for consistent colors and spacing */
+    --primary-color: #4CAF50; /* A clean green for links/buttons */
+    --text-color: #333333; /* Dark grey for better readability */
+    --background-color: #ffffff; /* Clean white background */
+    --spacing-unit: 20px;
+}
+
+body {
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif; /* Clean, web-safe font */
+    line-height: 1.6; /* Improves readability */
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: 0; /* Remove default browser margin */
+    padding: 0;
+    -webkit-font-smoothing: antialiased; /* Better font rendering on Mac/iOS */
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Base Font Size (16px is the accessibility standard) */
+p, li, a, button {
+    font-size: 1.1rem; /* Slightly larger text for easier reading */
+}
+
+/* Better Headings Hierarchy and Spacing */
+h1, h2, h3, .h1, .h2, .h3 {
+    margin-top: calc(2 * var(--spacing-unit));
+    margin-bottom: var(--spacing-unit);
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.h1 { font-size: 2.5rem; color: var(--primary-color); }
+.h2 { font-size: 2rem; }
+.h3 { font-size: 1.5rem; }
+
+
+/*
+==================================================
+2. LAYOUT AND SPACING (WHITE SPACE)
+==================================================
+The key to a "well formatted" site is using enough white space.
+*/
+
+/* --- Global Section Padding --- */
+.section {
+    padding: 80px 5%; /* Generous top/bottom padding for desktop sections */
+    max-width: 1200px; /* Center content on very large screens */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Adjust for mobile screens */
+@media (max-width: 767px) {
+    .section {
+        padding: 40px 5%; /* Less padding on small screens */
+    }
+    .w-container {
+        padding: 0 15px; /* Use a standard mobile padding */
+    }
+}
+
+/* --- Container Center & Max Width --- */
+.w-container, .w-section {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*
+==================================================
+3. IMAGES AND BRANDING FIXES
+==================================================
+Ensures images don't break the layout.
+*/
+
+/* Images should never overflow their container */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Removes a small spacing issue below images */
+}
+
+/* Target your logo/header specifically (adjust class name if needed) */
+.brand-image, .nav-logo {
+    max-height: 50px; /* Keep the logo a sensible size */
+    width: auto;
+}
+
+/*
+==================================================
+4. BUTTONS AND LINKS (CTAs)
+==================================================
+Make Call-to-Actions clear and inviting.
+*/
+
+a {
+    color: var(--primary-color);
+    text-decoration: none; /* Remove default underline */
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: #388E3C; /* Slightly darker green on hover */
+}
+
+.button, .w-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: var(--primary-color);
+    color: var(--background-color) !important; /* Force white text */
+    text-align: center;
+    border-radius: 5px; /* Subtle rounded corners */
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: background-color 0.2s, transform 0.1s;
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover, .w-button:hover {
+    background-color: #388E3C;
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* If you have a secondary button style */
+.button.secondary, .w-button.secondary {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color) !important;
+}
+
+.button.secondary:hover, .w-button.secondary:hover {
+    background-color: var(--primary-color);
+    color: var(--background-color) !important;
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Google Sign-In</title>
+</head>
+<body>
+    <div id="google-login-btn" style="padding: 10px; background: #4285F4; color: white; cursor: pointer;">
+        Sign In with Google
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script>
+        const supabase = supabase.createClient('https://fsnzlkqxlbrjwkxjyaby.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZzbnpsa3F4bGJyandreGp5YWJ5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjA1Mzg2NzksImV4cCI6MjA3NjExNDY3OX0.nYJfSSezieT7Vc-rXqqWZHD-kudf8zF71DpmwfV2J1o');
+        document.getElementById('google-login-btn').addEventListener('click', async () => {
+            console.log("Button clicked!");
+            const { error } = await supabase.auth.signInWithOAuth({
+                provider: 'google',
+                options: { redirectTo: 'http://127.0.0.1:5501/booking.html' }
+            });
+            if (error) console.error('Error:', error);
+            else console.log('Sign-In initiated!');
+        });
+    </script>
+</body>
+</html>

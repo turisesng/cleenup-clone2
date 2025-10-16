@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Log In / Sign Up - Wax-Wox</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <style>
+        :root { --primary: #008753; }
+        body { 
+            display: flex; align-items: center; justify-content: center; min-height: 100vh;
+            background-color: #f0f0f0; font-family: sans-serif; margin: 0;
+        }
+        .auth-container {
+            max-width: 400px; width: 90%; padding: 40px; border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); background-color: white;
+            text-align: center;
+        }
+        .cta-btn {
+            display: block; width: 100%; padding: 12px; margin: 15px 0;
+            border-radius: 4px; font-weight: bold; text-decoration: none;
+            transition: opacity 0.2s;
+        }
+        .cta-btn.google { background-color: #4285F4; color: white; }
+        .cta-btn.email { background-color: #008753; color: white; }
+    </style>
+</head>
+<body>
+    <div class="auth-container">
+        <h2 style="color: var(--primary);">Welcome to Wax-Wox Booking</h2>
+        <p>Choose your preferred way to log in or create an account:</p>
+        
+        <a href="index.html#hero" class="cta-btn google">Sign In with Google</a>
+        
+        <a href="#" class="cta-btn email">Sign In / Register with Email (Under Maintenance)</a>
+
+        <p style="margin-top: 25px;"><a href="index.html">Return to Homepage</a></p>
+    </div>
+</body>
+</html>
